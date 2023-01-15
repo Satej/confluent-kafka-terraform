@@ -3,7 +3,7 @@ This repo helps create few confluent resources using terraform for any test use 
 
 - To initialize the terraform setup run: `terraform init`
 - Create the plan:`terraform plan`
-- Create confluent resources: `terraform deploy` and type yes on prompt display
+- Create confluent resources: `terraform apply` and type yes on prompt display
 - Once you are done testing, destroy created resources: `terraform destroy` and type yes on prompt display
 
 Terraform deploys below 7 confluent resources:
