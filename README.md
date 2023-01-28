@@ -12,13 +12,16 @@ Export below two environment variables:
 - To initialize the terraform setup run: `terraform init`
 - Create the plan:`terraform plan`
 - Create confluent resources: `terraform apply` and type yes on prompt display
+- To see the output variables run `terraform output -json`. If you have jq installed, then `terraform output -json | jq`.
 - Once you are done testing, destroy created resources: `terraform destroy` and type yes on prompt display
 
-Terraform deploys below 7 confluent resources:
+Terraform deploys below confluent resources:
 1. confluent_environment.development
 2. confluent_kafka_cluster.basic
-3. confluent_service_account
-4. confluent_schema_registry_cluster
+3. confluent_service_account.app
+4. confluent_schema_registry_cluster.essentials
 5. confluent_role_binding.app-schema-registry-resource-owner
 6. confluent_role_binding.app-kafka-cluster-admin
 7. confluent_ksql_cluster
+8. confluent_api_key.app-manager-kafka-api-key
+9. confluent_kafka_topic.topic
