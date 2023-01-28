@@ -25,3 +25,4 @@ Terraform deploys below confluent resources:
 7. confluent_ksql_cluster
 8. confluent_api_key.app-manager-kafka-api-key
 9. confluent_kafka_topic.topic
+10. confluent_api_key.env-manager-schema-registry-api-key
