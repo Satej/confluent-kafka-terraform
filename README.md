@@ -1,6 +1,13 @@
 # confluent-kafka-terraform
 This repo helps create few confluent resources using terraform for any test use cases.
 
+[Confluent Terraform Provider](https://docs.confluent.io/cloud/current/get-started/terraform-provider.html)
+
+Export below two environment variables:
+
+`export CONFLUENT_CLOUD_API_KEY=YOUR_KEY`
+`export CONFLUENT_CLOUD_API_SECRET=YOUR_SECRET`
+
 - To initialize the terraform setup run: `terraform init`
 - Create the plan:`terraform plan`
 - Create confluent resources: `terraform apply` and type yes on prompt display
