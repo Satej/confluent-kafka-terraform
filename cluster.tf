@@ -2,7 +2,7 @@ resource "confluent_kafka_cluster" "basic" {
   display_name = "basic_kafka_cluster"
   availability = "SINGLE_ZONE"
   cloud        = "AWS"
-  region       = "us-east-1"
+  region       = "ap-south-1"
   basic {}
 
   environment {
@@ -12,8 +12,4 @@ resource "confluent_kafka_cluster" "basic" {
   lifecycle {
     prevent_destroy = false
   }
-}
-
-output "cluster_url" {
-  value = confluent_kafka_cluster.basic.bootstrap_endpoint
 }
