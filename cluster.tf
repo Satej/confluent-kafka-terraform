@@ -13,3 +13,7 @@ resource "confluent_kafka_cluster" "basic" {
     prevent_destroy = false
   }
 }
+
+output "cluster_url" {
+  value = confluent_kafka_cluster.basic.bootstrap_endpoint
+}

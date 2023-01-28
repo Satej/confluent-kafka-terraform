@@ -1,6 +1,6 @@
-resource "confluent_service_account" "app-ksql" {
-  display_name = "app-ksql"
-  description  = "Service account to manage 'example' ksqlDB cluster"
+resource "confluent_service_account" "app" {
+  display_name = "app"
+  description  = "Service account to manage kafka cluster"
 
   lifecycle {
     prevent_destroy = false

@@ -1,5 +1,5 @@
-resource "confluent_role_binding" "app-ksql-kafka-cluster-admin" {
-  principal   = "User:${confluent_service_account.app-ksql.id}"
+resource "confluent_role_binding" "app-kafka-cluster-admin" {
+  principal   = "User:${confluent_service_account.app.id}"
   role_name   = "CloudClusterAdmin"
   crn_pattern = confluent_kafka_cluster.basic.rbac_crn
 
@@ -8,8 +8,8 @@ resource "confluent_role_binding" "app-ksql-kafka-cluster-admin" {
   }
 }
 
-resource "confluent_role_binding" "app-ksql-schema-registry-resource-owner" {
-  principal   = "User:${confluent_service_account.app-ksql.id}"
+resource "confluent_role_binding" "app-schema-registry-resource-owner" {
+  principal   = "User:${confluent_service_account.app.id}"
   role_name   = "ResourceOwner"
   crn_pattern = format("%s/%s", confluent_schema_registry_cluster.essentials.resource_name, "subject=*")
 

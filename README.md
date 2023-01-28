@@ -19,6 +19,6 @@ Terraform deploys below 7 confluent resources:
 2. confluent_kafka_cluster.basic
 3. confluent_service_account
 4. confluent_schema_registry_cluster
-5. confluent_role_binding.app-ksql-schema-registry-resource-owner
-6. confluent_role_binding.app-ksql-kafka-cluster-admin
+5. confluent_role_binding.app-schema-registry-resource-owner
+6. confluent_role_binding.app-kafka-cluster-admin
 7. confluent_ksql_cluster
