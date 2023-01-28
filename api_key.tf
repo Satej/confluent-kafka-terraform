@@ -22,3 +22,13 @@ resource "confluent_api_key" "app-manager-kafka-api-key" {
     prevent_destroy = false
   }
 }
+
+output "api_key_id" {
+  value = confluent_api_key.app-manager-kafka-api-key.id
+  sensitive = true
+}
+
+output "api_key_secret" {
+  value = confluent_api_key.app-manager-kafka-api-key.secret
+  sensitive = true
+}
