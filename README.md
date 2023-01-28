@@ -6,6 +6,7 @@ This repo helps create few confluent resources using terraform for any test use 
 Export below two environment variables:
 
 `export CONFLUENT_CLOUD_API_KEY=YOUR_KEY`
+
 `export CONFLUENT_CLOUD_API_SECRET=YOUR_SECRET`
 
 - To initialize the terraform setup run: `terraform init`
